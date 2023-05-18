@@ -1,5 +1,5 @@
 addresses
-  address1: grid="w:310;s:478", pincode=53188, state=wisconsin
+  address1: grid="w:310 s:478", pincode=53188, state=wisconsin
     street: streetName=MAPLE, streetType=ave
   address2: grid="e:204 s:5600", pincode=84107, state=utah
   address3: pincode=96701, state=hawaii
