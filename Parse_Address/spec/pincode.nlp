@@ -1,0 +1,30 @@
+###############################################
+# FILE: pincode
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 22:45:54
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+@POST
+L("pin")=N("$text",1)+"-"+N("$text",3);
+AddAttribute(X("con"),"pincode",L("pin"));
+single();
+@RULES
+_pincode <-
+	_xNUM	### (1)
+	\-		### (2)
+	_xNUM	### (3)
+	_xEND	### (4)
+	@@
+
+@POST
+L("pin")=N("$text",1);
+AddAttribute(X("con"),"pincode",L("pin"));
+single();
+@RULES
+_pincode <-
+	_xNUM	### (1)
+	_xEND	### (2)
+	@@

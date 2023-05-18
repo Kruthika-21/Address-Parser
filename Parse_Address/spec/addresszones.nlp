@@ -1,0 +1,21 @@
+###############################################
+# FILE: addresszones
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 18:54:59
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_delimiter <-
+    \n
+    _xWILD [plus match=(\n \t _xEND)] ### (2)
+    @@
+
+@RULES
+_addresszones <-
+    _xWILD [min=0 max=0 fails=(\r)]
+	_delimiter
+	@@

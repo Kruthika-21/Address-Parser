@@ -1,0 +1,41 @@
+addresses
+  address1: grid="w:310;s:478", pincode=53188, state=wisconsin
+    street: streetName=MAPLE, streetType=ave
+  address2: grid="e:204 s:5600", pincode=84107, state=utah
+  address3: pincode=96701, state=hawaii
+    street: streetNum=99040, streetName=KAUHALE, streetType=st
+  address4: pincode="50441-1902", state=iowa
+    street: streetNum=1, streetName=ST, streetType=st
+    name: firstname=robin, surname=monet
+  address5: pincode="44730-9521", state=ohio
+    rural-route: routeNum="3 ", boxNum="9 A"
+  address6: pincode="55811-9702", state=minnesota
+    highway-contract: routeNum="72 ", boxNum="293 A"
+  address7: pincode="55803-0034", state=minnesota
+    name: title=miss, firstname=janice, surname=smith
+    postbox: boxNum="34 "
+  address8: pincode="55803-0034", state=minnesota
+    name: title=miss, firstname=janice, surname=smith
+    postbox: boxNum="34 "
+  address9: pincode="12345-6789", state=maryland
+    street: streetNum=4321, streetName=MAPLE, streetType=st
+    name: title=mister, firstname=S, surname=oneill
+    name: firstname=sean, surname=oneill
+  address10: pincode="96522-1215"
+    military: services=unit, serviceNo=2050, boxNum=4190, postOffice=APO, armedForces=AP
+    name: firstname=kevin, surname=beasley
+  address11
+    street: streetNum=1010, streetName=CLEAR, streetType=st
+    name: title=miss, firstname=helen, surname=saunders
+  address12: pincode="41081-1411", state=kentucky
+    name: title=mister, firstname=walter, surname=witherspoon
+  address13
+  address14: pincode="00957-1234"
+    street: streetNum=123, streetName=CALLE, streetType=main
+    street: streetName=ANYTOWN, streetType=pr
+  address15: pincode="98106-1234"
+    street: streetNum=123, streetName=Main, streetType=street
+  address16
+    street: streetNum=2413, streetName=FORB, streetType=st
+    name: title=mister, firstname=MICHEAL
+

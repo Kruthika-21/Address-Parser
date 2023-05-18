@@ -1,0 +1,53 @@
+###############################################
+# FILE: funcs
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 20:56:29
+# MODIFIED:
+###############################################
+
+@DECL
+
+AddAttribute(L("sent con"),L("name"),L("attribute")) {
+	addstrval(L("sent con"),L("name"),L("attribute"));
+}
+AddStreet(L("sent con"),L("name"),L("streetname"),L("streettype"),L("streetnum")) {
+	L("sent") =  makeconcept(L("sent con"),L("name"));
+	if(L("streetnum")){
+	addstrval(L("sent"),"streetNum",L("streetnum"));}
+	addstrval(L("sent"),"streetName",L("streetname"));
+	addstrval(L("sent"),"streetType",L("streettype"));
+	
+}
+AddName(L("sent con"),L("name"),L("title"),L("firstname"),L("lastname")) {
+	L("sent") =  makeconcept(L("sent con"),L("name"));
+	if(L("title")){
+	addstrval(L("sent"),"title",L("title"));}
+	if(L("firstname")){
+	addstrval(L("sent"),"firstname",L("firstname"));}
+	if(L("lastname")){
+	addstrval(L("sent"),"surname",L("lastname"));}
+	
+}
+AddRuralRoute(L("sent con"),L("name"),L("num1"),L("num2")) {
+	L("sent") =  makeconcept(L("sent con"),L("name"));
+	addstrval(L("sent"),"routeNum",L("num1"));
+	addstrval(L("sent"),"boxNum",L("num2"));
+	
+}
+AddPostBox(L("sent con"),L("name"),L("num1")) {
+	L("sent") =  makeconcept(L("sent con"),L("name"));
+	addstrval(L("sent"),"boxNum",L("num1"));
+	
+}
+
+AddMilitary(L("sent con"),L("name"),L("v1"),L("v2"),L("v3"),L("v4"),L("v5")) {
+	L("sent") =  makeconcept(L("sent con"),L("name"));
+	addstrval(L("sent"),"services",L("v1"));
+	addstrval(L("sent"),"serviceNo",L("v2"));
+	addstrval(L("sent"),"boxNum",L("v3"));
+	addstrval(L("sent"),"postOffice",L("v4"));
+	addstrval(L("sent"),"armedForces",L("v5"));
+	
+}
+@@DECL

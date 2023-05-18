@@ -1,0 +1,23 @@
+###############################################
+# FILE: military
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 23:0:46
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+
+@POST
+AddMilitary(X("con"),"military", N("$text",1),N("$text",2),N("$text",4),strtoupper(N("$text",5)),strtoupper(N("$text",6)));
+single();
+
+@RULES
+_military <-
+	_ptype		### (1)
+	_xNUM		### (2)
+	BOX			### (3)
+	_xNUM		### (4)
+	_postoffice	### (5)
+	_stateabbr	### (6)
+	@@

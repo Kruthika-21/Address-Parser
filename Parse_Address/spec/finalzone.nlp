@@ -1,0 +1,22 @@
+###############################################
+# FILE: finalzone
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 19:38:18
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+@POST
+S("con") = MakeCountCon(G("addresses"),"address");
+single();
+@RULES
+_addresszones <-
+    _xWILD [min=0 max=0 fails=(\r _delimiter)]
+	@@
+
+@POST
+excise(1,1);
+@RULES
+_xNIL<-
+_delimiter@@

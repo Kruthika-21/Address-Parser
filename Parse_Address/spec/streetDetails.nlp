@@ -1,0 +1,48 @@
+###############################################
+# FILE: streetDetails
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 21:34:4
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+
+@POST
+L("streetname") = N("$text",1);
+L("streettype") = N("$text",2);
+AddStreet(X("con"),"street",L("streetname"),L("streettype"),0);
+
+@RULES
+_streetdet <-
+	_xALPHA		### (1)
+	_streetsuff	### (2)
+	@@
+
+@POST
+L("streetnum") = N("$text",1);
+L("streetname") = N("$text",2);
+L("streettype") = N("$text",3);
+AddStreet(X("con"),"street",L("streetname"),L("streettype"),L("streetnum"));
+
+@RULES
+_streetdet <-
+	_xNUM 
+	_xALPHA		### (1)
+	_streetsuff	### (2)
+	@@
+
+@POST
+L("streetnum") = N("$text",1)+N("$text",3);
+L("streetname") = N("$text",4);
+L("streettype") = N("$text",5);
+AddStreet(X("con"),"street",L("streetname"),L("streettype"),L("streetnum"));
+
+@RULES
+_streetdet <-
+	_xNUM		### (1)
+	\-			### (2)
+	_xNUM		### (3)
+	_xALPHA		### (4)
+	_streetsuff	### (5)
+	@@

@@ -1,0 +1,9 @@
+unit s=ptype 
+cmr s=ptype 
+psc s=ptype 
+apo s=postoffice 
+fpo s=postoffice 
+dpo s=postoffice 
+aa s=stateabbr 
+ae s=stateabbr 
+ap s=stateabbr 

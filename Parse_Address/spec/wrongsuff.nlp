@@ -1,0 +1,35 @@
+###############################################
+# FILE: wrongsuff
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 20:41:50
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+@POST
+splice(2,2);
+
+@RULES
+_xNIL <-
+    _xNUM		### (1)
+    _streetsuff	### (2)
+    @@
+
+@POST
+splice(2,2);
+
+@RULES
+_xNIL <-
+    _desgn		### (1)
+    _xWILD [one match=(_direction _streetsuff _state)]	### (2)
+    @@
+
+@POST
+splice(2,2);
+
+@RULES
+_xNIL <-
+    _firstname		### (1)
+    _xWILD [one match=(_direction _streetsuff _state)]	### (2)
+    @@

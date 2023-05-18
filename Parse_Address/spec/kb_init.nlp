@@ -1,0 +1,14 @@
+###############################################
+# FILE: kb_init
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 19:45:19
+# MODIFIED:
+###############################################
+
+@CODE
+
+G("addresses") = findconcept(findroot(),"addresses");
+if (!G("addresses")) G("addresses") = makeconcept(findroot(),"addresses");
+
+@@CODE

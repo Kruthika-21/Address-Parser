@@ -1,0 +1,34 @@
+###############################################
+# FILE: names
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-18 8:37:14
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+@POST
+L("x") = N(1);
+L("t") = pnvar(L("x"),"attr");
+L("f") = N("$text",2);
+L("l") = N("$text",3);
+AddName(X("con"),"name",L("t")[0],L("f"),L("l"));
+single();
+@RULES
+_name <-
+	_desgn
+	_xWILD [plus match=(_firstname _xALPHA)]
+	_xWILD [min=0 max=0 match=(_surname)]	### (1)
+	@@
+
+@POST
+L("f") = N("$text",1);
+L("l") = N("$text",2);
+AddName(X("con"),"name",0,L("f"),L("l"));
+single();
+
+@RULES
+_name <-
+	_firstname
+	_surname	### (1)
+	@@

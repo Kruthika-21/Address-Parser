@@ -1,0 +1,33 @@
+###############################################
+# FILE: grid
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 19:40:16
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+
+@POST
+S("grid") = N("$text",2)+":"+N("$text",1)+" "+N("$text",4)+":"+N("$text",3);
+AddAttribute(X("con"),"grid",S("grid"));
+single();
+@RULES
+_grid <-
+	_xNUM		### (1)
+	_direction	### (2)
+	_xNUM		### (3)
+	_direction	### (4)
+	@@
+
+@POST
+S("grid") = N("$text",1)+":"+N("$text",2)+";"+N("$text",3)+":"+N("$text",4);
+AddAttribute(X("con"),"grid",S("grid"));
+single();
+@RULES
+_grid <-
+	_direction		### (1)
+	_xNUM	### (2)
+	_direction		### (3)
+	_xNUM	### (4)
+	@@

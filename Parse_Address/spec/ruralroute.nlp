@@ -1,0 +1,53 @@
+###############################################
+# FILE: ruralroute
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-18 11:27:21
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+
+@POST
+L("num1") = N("$text",2)+" "+N("$text",3);
+L("num2") = N("$text",5)+" "+N("$text",6);
+AddRuralRoute(X("con"),"rural-route",L("num1"),L("num2"));
+single();
+
+@RULES
+_ruralroute <-
+	RR		### (1)
+	_xNUM	### (2)
+	_xWILD [min=0 max=1 match=(_xCAPLET)]	### (3)
+	BOX		### (3)
+	_xNUM	### (4)
+	_xWILD [min=0 max=1 match=(_xCAPLET)]	### (6)
+	@@
+
+@POST
+L("num1") = N("$text",2)+" "+N("$text",3);
+L("num2") = N("$text",5)+" "+N("$text",6);
+AddRuralRoute(X("con"),"highway-contract",L("num1"),L("num2"));
+single();
+
+@RULES
+_highwayContract <-
+	HC		### (1)
+	_xNUM	### (2)
+	_xWILD [min=0 max=1 match=(_xCAPLET)]	### (3)
+	BOX		### (3)
+	_xNUM	### (4)
+	_xWILD [min=0 max=1 match=(_xCAPLET)]	### (6)
+	@@
+
+@POST
+L("num2") = N("$text",2)+" "+N("$text",3);
+AddPostBox(X("con"),"postbox",L("num2"));
+single();
+
+@RULES
+_postbox <-
+	BOX										### (1)
+	_xNUM									### (2)
+	_xWILD [min=0 max=1 match=(_xCAPLET)]	### (3)
+	@@

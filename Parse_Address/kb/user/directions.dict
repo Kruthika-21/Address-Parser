@@ -1,0 +1,16 @@
+e s=direction attr=east
+east s=direction attr=east
+n s=direction attr=north
+ne s=direction attr=northeast
+north s=direction attr=north
+northeast s=direction attr=northeast
+northwest s=direction attr=northwest
+nw s=direction attr=northwest
+s s=direction attr=south
+se s=direction attr=southeast
+south s=direction attr=south
+southeast s=direction attr=southeast
+southwest s=direction attr=southwest
+sw s=direction attr=southwest
+w s=direction attr=west
+west s=direction attr=west

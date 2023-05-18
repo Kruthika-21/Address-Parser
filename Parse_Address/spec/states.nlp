@@ -1,0 +1,18 @@
+###############################################
+# FILE: states
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-18 10:21:50
+# MODIFIED:
+###############################################
+
+@NODES _addresszones
+@POST
+L("t") = N(1);
+L("num") = pnvar(L("t"),"state");
+AddAttribute(X("con"),"state",L("num")[0]);
+@RULES
+_xNIL <-
+	_state
+	_pincode
+	@@

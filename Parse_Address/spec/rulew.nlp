@@ -1,0 +1,13 @@
+###############################################
+# FILE: rulew
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-5-17 19:32:22
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+@RULES
+_addresszones <-
+    _xWILD [min=0 max=0 fails=(\r _delimiter)]
+	@@

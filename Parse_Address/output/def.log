@@ -1,0 +1,16 @@
+Sequence file is:
+dicttok
+NOHASH rule: _addresszones [] [] <- _xWILD [0,0 fails=()] [] _delimiter [1,1] [] @@
+NOHASH rule: _addresszones [] [] <- _xWILD [0,0 fails=( _delimiter)] [] @@
+NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
+NOHASH rule: _xNIL [] [] <- _xNUM [1,1] [] _streetsuff [1,1] [] @@
+NOHASH rule: _xNIL [] [] <- _xNUM [1,1] [] _streetsuff [1,1] [] @@
+NOHASH rule: _grid [] [] <- _xNUM [1,1] [] _direction [1,1] [] _xNUM [1,1] [] _direction [1,1] [] @@
+NOHASH rule: _streetdet [] [] <- _xALPHA [1,1] [] _streetsuff [1,1] [] @@
+NOHASH rule: _streetdet [] [] <- _xNUM [1,1] [] _xALPHA [1,1] [] _streetsuff [1,1] [] @@
+NOHASH rule: _streetdet [] [] <- _xNUM [1,1] [] - [1,1] [] _xNUM [1,1] [] _xALPHA [1,1] [] _streetsuff [1,1] [] @@
+NOHASH rule: _pincode [] [] <- _xNUM [1,1] [] - [1,1] [] _xNUM [1,1] [] _xEND [1,1] [] @@
+NOHASH rule: _pincode [] [] <- _xNUM [1,1] [] _xEND [1,1] [] @@
+
+Passes: (dicttok,nil) (nlp,kb_init) (nlp,KBFuncs) (nlp,funcs) (nlp,addresszones) (nlp,finalzone) (nlp,RemoveWhitespace) (nlp,wrongsuff) (nlp,grid) (nlp,streetDetails) (nlp,pincode) (nlp,military) (nlp,names) (nlp,states) (nlp,ruralroute) (nlp,kbdisplay01) 
+
